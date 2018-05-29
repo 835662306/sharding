@@ -17,9 +17,10 @@ boot-sharding是springBoot项目，简单结合当当网的sharding-jdbc实现�
 #### **友情链接：**
 - GitHub：https://github.com/apple987 <br>
 - 码云地址： https://gitee.com/bootstrap2table<br>
+- mycat示例： https://gitee.com/bootstrap2table/boot_master/tree/feature/mycat<br>
+- dubbo示例： https://gitee.com/reger/spring-boot-starter-dubbo<br>
 
 #### **问题反馈：**
 - 意见反馈：https://gitee.com/bootstrap2table/boot-sharding/issues
 - 联系作者: m15171479289@163.com<br>
 		
-
