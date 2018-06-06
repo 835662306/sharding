@@ -1,7 +1,8 @@
 package com.test.service;
 
-import java.util.List;
-
+import com.test.Application;
+import com.test.model.Order;
+import com.test.model.OrderItem;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +11,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.test.Application;
-import com.test.model.Order;
-import com.test.service.OrderService;
+import java.util.List;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -44,5 +43,15 @@ public class OrderServiceTest {
     	o2.setUserId(2);
     	orderService.createOrder(o2);
     }
-
+	@Test
+	@Rollback(false)
+	public void createOrderItem() throws Exception {
+		for(int i =1; i<10; i++){
+			OrderItem o1=new OrderItem();
+			o1.setItemId(i);
+			o1.setOrderId(i);
+			o1.setUserId(i);
+			orderService.createOrderItem(o1);
+		}
+	}
 }

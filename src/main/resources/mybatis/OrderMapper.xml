@@ -14,4 +14,8 @@
 		insert into
 		t_order(user_id, order_id) values (#{userId}, #{orderId})
 	</insert>
+	<insert id="createOrderItem" parameterType="com.test.model.OrderItem">
+		insert into
+		t_order_item(item_id, user_id, order_id) values (#{itemId}, #{userId}, #{orderId})
+	</insert>
 </mapper>
